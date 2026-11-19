@@ -1,0 +1,16 @@
+net,signal_type,nodes,description
+3V3,power,J1_OBC.4 J2_EPS.3,3.3 V supply EPS -> OBC
+5V_BP,power,J2_EPS.11 U1_LM35.1,5 V supply EPS -> LM35 on backplane
+CAMERA_SW,digital control,J1_OBC.40 J2_EPS.39,OBC control signal -> EPS MOSFET switch for camera power
+COM_5V,power,J2_EPS.12 J3_PAYLOAD_COM.11 J3_PAYLOAD_COM.12,5 V supply EPS -> communication (LoRa/Arduino)
+CURRENT_SENSE,analog signal,J1_OBC.10 J2_EPS.9,ACS712 current-sensor output EPS -> OBC (analog)
+DIGI_COM_SW,digital control,J1_OBC.36 J2_EPS.35,OBC control signal -> EPS MOSFET switch for digipeater/COM power
+GND,ground,J1_OBC.2 J2_EPS.1 J2_EPS.2 J2_EPS.4 J3_PAYLOAD_COM.1 J3_PAYLOAD_COM.2 J3_PAYLOAD_COM.3 J3_PAYLOAD_COM.4 J3_PAYLOAD_COM.33 J3_PAYLOAD_COM.34 J3_PAYLOAD_COM.35 J3_PAYLOAD_COM.36,Common ground
+GND_BP,ground,J2_EPS.13 U1_LM35.3,Ground for LM35 on backplane
+PAY_12V1,power,J2_EPS.20 J3_PAYLOAD_COM.19 J3_PAYLOAD_COM.20,12 V supply #1 EPS -> payload
+PAY_12V2,power,J2_EPS.22 J3_PAYLOAD_COM.21 J3_PAYLOAD_COM.22,12 V supply #2 EPS -> payload
+PAY_5V,power,J2_EPS.14 J3_PAYLOAD_COM.13 J3_PAYLOAD_COM.14,5 V supply EPS -> payload
+SOLAR_NEG,power,J2_EPS.29 J2_EPS.30 J4_SOLAR.2,Solar panel - (solar header -> EPS charger)
+SOLAR_POS,power,J2_EPS.27 J2_EPS.28 J4_SOLAR.1,Solar panel + (solar header -> EPS charger)
+TEMP_LM35_OUT,analog signal,J1_OBC.12 U1_LM35.2,LM35 temperature output (on backplane) -> OBC ADC
+V_BAT,power,J1_OBC.8 J2_EPS.7,Raw battery voltage EPS -> OBC (OBC regulator / voltage sense)

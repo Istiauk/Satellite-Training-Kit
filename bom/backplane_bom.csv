@@ -1,0 +1,4 @@
+designator,item,quantity,unit_price_bdt,total_cost_bdt
+J1-J3,2x20 female pin header 2.54 mm pitch through-hole (8 mm body),3,20.44,61.32
+U1,LM35 analog temperature sensor (3-pin header footprint),1,,
+J4,2-pin solar input header,1,,

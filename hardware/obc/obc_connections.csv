@@ -1,0 +1,49 @@
+designator,pin,pin_name,net,connects_to,note
+TB1,19,A0,A0,P1.10 (CURRENT_SENSE),ACS712 output from EPS
+TB1,20,A1,A1,P1.12 (TEMP_LM35_OUT); RVD0/RVD1 divider,CLASH: LM35 and battery divider share A1 - see design review
+TB1,23,A4,SDA,MPU6050.4; BMP180.4,I2C data
+TB1,24,A5,SCL,MPU6050.3; BMP180.3,I2C clock
+TB1,5,D2,D2,LoRa1.5 (DIO0); P1.36 (DIGI_COM_SW),CLASH: LoRa DIO0 output and switch output share D2 - see design review
+TB1,6,D3,D3,P1.40 (CAMERA_SW),camera power switch control
+TB1,12,D9,D9,LoRa1.4 (RESET),SX1278 reset
+TB1,13,D10,D10,LoRa2.2 (NSS),SPI chip select
+TB1,14,D11/MOSI,D11/MOSI,LoRa2.3 (MOSI),SPI
+TB1,15,D12/MISO,D12/MISO,LoRa2.4 (MISO),SPI
+TB1,16,D13/SCK,D13/SCK,LoRa2.5 (SCK),SPI
+TB1,27,+5V,(none),-,not connected to the +5 net in the schematic image - verify
+TB1,"4,29",GND,(none),-,not connected to GND in the schematic image - verify
+U1,1,IN,V_BAT,P1.8,L7805CV linear regulator input
+U1,2,OUT,+5,C1; RVR1; MPU6050.1; BMP180.1; RSW0,5 V rail on the OBC
+U1,3,GND,GND,-,
+C1,1-2,1 uF,+5 / GND,-,regulator output capacitor
+RVR1,1-2,1 kOhm,+5 / LED_G,LED_G anode,power LED current limit
+LED_G,A-K,green LED,LED_G / GND,-,power indicator
+S1,1-2,RESET button,GND / RESET,RSW0,RESET net not connected to TB1 RESET pins in the image - verify
+RSW0,1-2,1 kOhm,+5 / RESET,S1.2,reset pull-up
+RVD0,1-2,10 kOhm,V_BAT / A1,-,battery divider top
+RVD1,1-2,10 kOhm,A1 / GND,-,"battery divider bottom (ratio 1/2 -> up to 8.4 V at the ADC, see design review)"
+MPU6050,1,VCC,+5,U1.2,GY-521 module
+MPU6050,2,GND,GND,,
+MPU6050,3,SCL,SCL,TB1 A5,
+MPU6050,4,SDA,SDA,TB1 A4,
+BMP180,1,VIN,+5,U1.2,GY-68 module
+BMP180,2,GND,GND,,
+BMP180,3,SCL,SCL,TB1 A5,
+BMP180,4,SDA,SDA,TB1 A4,
+LoRa1,1,ANT side GND,GND,,SX1278 (Ra-02) left row
+LoRa1,2,GND,GND,,
+LoRa1,3,3.3V,3V3,P1.4,supply from EPS 3.3 V rail
+LoRa1,4,RESET,D9,TB1 D9,
+LoRa1,5,DIO0,D2,TB1 D2,see D2 clash
+LoRa2,1,GND,GND,,SX1278 (Ra-02) right row
+LoRa2,2,NSS,D10,TB1 D10,
+LoRa2,3,MOSI,D11/MOSI,TB1 D11,
+LoRa2,4,MISO,D12/MISO,TB1 D12,
+LoRa2,5,SCK,D13/SCK,TB1 D13,
+P1,2,backplane,GND,J1.2,
+P1,4,backplane,3V3,J1.4,
+P1,8,backplane,V_BAT,J1.8,
+P1,10,backplane,A0,J1.10,CURRENT_SENSE
+P1,12,backplane,A1,J1.12,TEMP_LM35_OUT
+P1,36,backplane,D2,J1.36,DIGI_COM_SW
+P1,40,backplane,D3,J1.40,CAMERA_SW

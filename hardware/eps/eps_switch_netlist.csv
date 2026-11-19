@@ -1,0 +1,17 @@
+designator,pin,pin_name,net,connects_to,note
+Q1,1,G (IRF9540 P-ch),Q1_GATE,R3.1; Q2.2,COM/digipeater high-side switch
+Q1,2,D,COM_12V,COM output,switched supply to COM
+Q1,3,S,VCC,R3.2,input rail
+R3,1-2,10 kOhm,Q1_GATE / VCC,-,gate pull-up: keeps Q1 OFF by default
+Q2,1,G (IRF540 N-ch),DIG_SW,R4.1; OBC D2 via backplane J2.35,5 V logic from OBC
+Q2,2,D,Q1_GATE,Q1.1,pulls Q1 gate low when ON
+Q2,3,S,GND,R4.2,
+R4,1-2,10 kOhm,DIG_SW / GND,-,gate pull-down: OFF if OBC pin floats
+Q3,1,G (IRF9540 P-ch),Q3_GATE,R1.1; Q4.2,payload (camera + VTX) high-side switch
+Q3,2,D,PAY_12VIN,payload 12 V output,
+Q3,3,S,VCC,R1.2,
+R1,1-2,10 kOhm,Q3_GATE / VCC,-,gate pull-up
+Q4,1,G (IRF540 N-ch),CAM_SW,R2.1; OBC D3 via backplane J2.39,
+Q4,2,D,Q3_GATE,Q3.1,
+Q4,3,S,GND,R2.2,
+R2,1-2,10 kOhm,CAM_SW / GND,-,gate pull-down

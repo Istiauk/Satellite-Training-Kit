@@ -1,0 +1,9 @@
+rail,source,regulator,consumers,backplane_pins,switched_by
+"V_BAT (14.8 V nominal, 16.8 V max)",4x 18650 in series,-,OBC L7805 input; OBC battery divider,J2.7 -> J1.8,main SPDT switch only
+3V3,battery,MINI360 buck,OBC SX1278 radio,J2.3 -> J1.4,always on (report: EPS directly powers the OBC)
+5V_BP,battery,MINI360 buck,LM35 on backplane,J2.11,always on (report: EPS directly powers the temperature sensor)
+COM_5V,battery,MINI360 buck,Payload & COM board: E32 module (E1.6),J2.12 -> J3.11/12,COM switch Q1/Q2 driven by DIG_SW (switch output is labelled COM_12V in the schematic)
+PAY_5V,battery,MINI360 buck,Payload & COM board: Arduino Nano,J2.14 -> J3.13/14,not shown
+PAY_12V1,battery,MINI360 buck,FPV camera (Camera1.2),J2.20 -> J3.19/20,payload switch Q3/Q4 driven by CAM_SW (switch output PAY_12VIN)
+PAY_12V2,battery,MINI360 buck,5.8 GHz VTX (VTX1.5),J2.22 -> J3.21/22,payload switch Q3/Q4 driven by CAM_SW (switch output PAY_12VIN)
+7.1-7.4 V,battery,buck (EPS block diagram),not assigned on the backplane,-,-

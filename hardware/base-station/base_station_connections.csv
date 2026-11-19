@@ -1,0 +1,24 @@
+designator,pin,pin_name,net,connects_to,note
+TB1,22,A3,TXD,P1.4 (E32 #1 TXD),Nano 1 - digipeater link
+TB1,23,A4,RXD,P1.3 (E32 #1 RXD),
+TB1,24,A5,MD0,P1.1 (M0),
+TB1,25,A6,MD1,P1.2 (M1),analog-input only: cannot drive M1 - tie M1 to GND
+TB1,26,A7,AUX,P1.5,analog-input only: read with analogRead()
+TB2,5,D2,TXD1,P2.4 (E32 #2 TXD),Nano 2 - PCB routes a second E32 here
+TB2,6,D3,RXD1,P2.3 (E32 #2 RXD),
+TB2,7,D4,MD01,P2.1 (M0),
+TB2,8,D5,MD11,P2.2 (M1),
+TB2,9,D6,AUX1,P2.5,
+TB1/TB2,"4,29",GND,(none),-,Nano GND not tied to the radio GND net in the image - verify (UART needs common ground)
+P1,6,VCC,VCC,U1.3,E32 #1 supply (5 V from MINI360)
+P1,7,GND,GND,U1.4,
+P2,6,VCC,VCC,U1.3,E32 #2 supply
+P2,7,GND,GND,U1.4,
+U1,1,IN+,VCC_BAT2,P4.2,MINI360 buck converter
+U1,2,IN-,GND_BAT,P3.2,
+U1,3,OUT+,VCC,P1.6; P2.6,5 V for the radios
+U1,4,OUT-,GND,P1.7; P2.7,
+P3,1,battery +,VCC_BAT,P4.1,external battery input
+P3,2,battery -,GND_BAT,U1.2,
+P4,1-2,switch / jumper,VCC_BAT / VCC_BAT2,-,power on/off
+(rework),-,SX1278 on Nano 2,"D9 RST, D10 NSS, D11 MOSI, D12 MISO, D13 SCK, 3V3, GND",jumper wires,chosen fix: Nano 2 uses an SX1278 to talk to the OBC (P2 left empty)

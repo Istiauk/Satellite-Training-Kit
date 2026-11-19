@@ -1,0 +1,31 @@
+designator,pin,pin_name,net,connects_to,note
+TB1,22,A3,TXD,E1.4 (E32 TXD),Arduino receives on A3 (SoftwareSerial RX)
+TB1,23,A4,RXD,E1.3 (E32 RXD),Arduino transmits on A4 (SoftwareSerial TX)
+TB1,24,A5,M0,E1.1,mode select
+TB1,25,A6,M1,E1.2,A6 is analog-input only on the Nano: cannot drive M1 - see design review
+TB1,26,A7,AUX,E1.5,A7 is analog-input only: read with analogRead()
+TB1,14,D11/MOSI,GND2,P1.4,POWER MISWIRE: ground routed to D11 instead of a GND pin - see design review
+TB1,15,D12/MISO,5V2,P1.14,POWER MISWIRE: 5 V routed to D12 instead of the +5V pin - see design review
+E1,1,M0,M0,TB1 A5,EBYTE E32-433T30D
+E1,2,M1,M1,TB1 A6,
+E1,3,RXD,RXD,TB1 A4,
+E1,4,TXD,TXD,TB1 A3,
+E1,5,AUX,AUX,TB1 A7,
+E1,6,VCC,5V1,P1.12 (COM_5V),
+E1,7,GND,GND1,P1.2,
+VTX1,1,GND,GND4,P1.36,TS5828L video transmitter
+VTX1,2,-,(unlabelled stub),-,wire stub with no net label (ERC warning in the image)
+VTX1,3,Video in,Video,Camera1.1,
+VTX1,4,GND,GND4,P1.36,
+VTX1,5,12 V in,12V2,P1.22 (PAY_12V2),
+Camera1,1,Video out,Video,VTX1.3,1000TVL CCD FPV camera
+Camera1,2,12 V in,12V1,P1.20 (PAY_12V1),
+Camera1,3,GND,GND3,P1.34,
+P1,2,backplane,GND1,J3.2,
+P1,4,backplane,GND2,J3.4,
+P1,12,backplane,5V1,J3.12 (COM_5V),
+P1,14,backplane,5V2,J3.14 (PAY_5V),
+P1,20,backplane,12V1,J3.20 (PAY_12V1),
+P1,22,backplane,12V2,J3.22 (PAY_12V2),
+P1,34,backplane,GND3,J3.34,
+P1,36,backplane,GND4,J3.36,

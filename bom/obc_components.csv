@@ -1,0 +1,8 @@
+item,function,interface
+Arduino Nano,Microcontroller - collects telemetry and handles ground commands,-
+SX1278 LoRa module,Telemetry downlink and command uplink to base station,SPI
+MPU6050 IMU,Acceleration and rotation,I2C
+BMP180,Pressure / altitude (and temperature),I2C
+LM35,Analog temperature (mounted on backplane),ADC
+ACS712-5A,Battery current measurement (from EPS),ADC
+Potential divider,Battery voltage measurement,ADC

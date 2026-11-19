@@ -1,0 +1,121 @@
+header,pin,row,column,net,signal_type,description
+J1_OBC,1,1,odd,NC,not connected,Unused / floating
+J1_OBC,2,1,even,GND,ground,Common ground
+J1_OBC,3,2,odd,NC,not connected,Unused / floating
+J1_OBC,4,2,even,3V3,power,3.3 V supply EPS -> OBC
+J1_OBC,5,3,odd,NC,not connected,Unused / floating
+J1_OBC,6,3,even,NC,not connected,Unused / floating
+J1_OBC,7,4,odd,NC,not connected,Unused / floating
+J1_OBC,8,4,even,V_BAT,power,Raw battery voltage EPS -> OBC (OBC regulator / voltage sense)
+J1_OBC,9,5,odd,NC,not connected,Unused / floating
+J1_OBC,10,5,even,CURRENT_SENSE,analog signal,ACS712 current-sensor output EPS -> OBC (analog)
+J1_OBC,11,6,odd,NC,not connected,Unused / floating
+J1_OBC,12,6,even,TEMP_LM35_OUT,analog signal,LM35 temperature output (on backplane) -> OBC ADC
+J1_OBC,13,7,odd,NC,not connected,Unused / floating
+J1_OBC,14,7,even,NC,not connected,Unused / floating
+J1_OBC,15,8,odd,NC,not connected,Unused / floating
+J1_OBC,16,8,even,NC,not connected,Unused / floating
+J1_OBC,17,9,odd,NC,not connected,Unused / floating
+J1_OBC,18,9,even,NC,not connected,Unused / floating
+J1_OBC,19,10,odd,NC,not connected,Unused / floating
+J1_OBC,20,10,even,NC,not connected,Unused / floating
+J1_OBC,21,11,odd,NC,not connected,Unused / floating
+J1_OBC,22,11,even,NC,not connected,Unused / floating
+J1_OBC,23,12,odd,NC,not connected,Unused / floating
+J1_OBC,24,12,even,NC,not connected,Unused / floating
+J1_OBC,25,13,odd,NC,not connected,Unused / floating
+J1_OBC,26,13,even,NC,not connected,Unused / floating
+J1_OBC,27,14,odd,NC,not connected,Unused / floating
+J1_OBC,28,14,even,NC,not connected,Unused / floating
+J1_OBC,29,15,odd,NC,not connected,Unused / floating
+J1_OBC,30,15,even,NC,not connected,Unused / floating
+J1_OBC,31,16,odd,NC,not connected,Unused / floating
+J1_OBC,32,16,even,NC,not connected,Unused / floating
+J1_OBC,33,17,odd,NC,not connected,Unused / floating
+J1_OBC,34,17,even,NC,not connected,Unused / floating
+J1_OBC,35,18,odd,NC,not connected,Unused / floating
+J1_OBC,36,18,even,DIGI_COM_SW,digital control,OBC control signal -> EPS MOSFET switch for digipeater/COM power
+J1_OBC,37,19,odd,NC,not connected,Unused / floating
+J1_OBC,38,19,even,NC,not connected,Unused / floating
+J1_OBC,39,20,odd,NC,not connected,Unused / floating
+J1_OBC,40,20,even,CAMERA_SW,digital control,OBC control signal -> EPS MOSFET switch for camera power
+J2_EPS,1,1,odd,GND,ground,Common ground
+J2_EPS,2,1,even,GND,ground,Common ground
+J2_EPS,3,2,odd,3V3,power,3.3 V supply EPS -> OBC
+J2_EPS,4,2,even,GND,ground,Common ground
+J2_EPS,5,3,odd,NC,not connected,Unused / floating
+J2_EPS,6,3,even,NC,not connected,Unused / floating
+J2_EPS,7,4,odd,V_BAT,power,Raw battery voltage EPS -> OBC (OBC regulator / voltage sense)
+J2_EPS,8,4,even,NC,not connected,Unused / floating
+J2_EPS,9,5,odd,CURRENT_SENSE,analog signal,ACS712 current-sensor output EPS -> OBC (analog)
+J2_EPS,10,5,even,NC,not connected,Unused / floating
+J2_EPS,11,6,odd,5V_BP,power,5 V supply EPS -> LM35 on backplane
+J2_EPS,12,6,even,COM_5V,power,5 V supply EPS -> communication (LoRa/Arduino)
+J2_EPS,13,7,odd,GND_BP,ground,Ground for LM35 on backplane
+J2_EPS,14,7,even,PAY_5V,power,5 V supply EPS -> payload
+J2_EPS,15,8,odd,NC,not connected,Unused / floating
+J2_EPS,16,8,even,NC,not connected,Unused / floating
+J2_EPS,17,9,odd,NC,not connected,Unused / floating
+J2_EPS,18,9,even,NC,not connected,Unused / floating
+J2_EPS,19,10,odd,NC,not connected,Unused / floating
+J2_EPS,20,10,even,PAY_12V1,power,12 V supply #1 EPS -> payload
+J2_EPS,21,11,odd,NC,not connected,Unused / floating
+J2_EPS,22,11,even,PAY_12V2,power,12 V supply #2 EPS -> payload
+J2_EPS,23,12,odd,NC,not connected,Unused / floating
+J2_EPS,24,12,even,NC,not connected,Unused / floating
+J2_EPS,25,13,odd,NC,not connected,Unused / floating
+J2_EPS,26,13,even,NC,not connected,Unused / floating
+J2_EPS,27,14,odd,SOLAR_POS,power,Solar panel + (solar header -> EPS charger)
+J2_EPS,28,14,even,SOLAR_POS,power,Solar panel + (solar header -> EPS charger)
+J2_EPS,29,15,odd,SOLAR_NEG,power,Solar panel - (solar header -> EPS charger)
+J2_EPS,30,15,even,SOLAR_NEG,power,Solar panel - (solar header -> EPS charger)
+J2_EPS,31,16,odd,NC,not connected,Unused / floating
+J2_EPS,32,16,even,NC,not connected,Unused / floating
+J2_EPS,33,17,odd,NC,not connected,Unused / floating
+J2_EPS,34,17,even,NC,not connected,Unused / floating
+J2_EPS,35,18,odd,DIGI_COM_SW,digital control,OBC control signal -> EPS MOSFET switch for digipeater/COM power
+J2_EPS,36,18,even,NC,not connected,Unused / floating
+J2_EPS,37,19,odd,NC,not connected,Unused / floating
+J2_EPS,38,19,even,NC,not connected,Unused / floating
+J2_EPS,39,20,odd,CAMERA_SW,digital control,OBC control signal -> EPS MOSFET switch for camera power
+J2_EPS,40,20,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,1,1,odd,GND,ground,Common ground
+J3_PAYLOAD_COM,2,1,even,GND,ground,Common ground
+J3_PAYLOAD_COM,3,2,odd,GND,ground,Common ground
+J3_PAYLOAD_COM,4,2,even,GND,ground,Common ground
+J3_PAYLOAD_COM,5,3,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,6,3,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,7,4,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,8,4,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,9,5,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,10,5,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,11,6,odd,COM_5V,power,5 V supply EPS -> communication (LoRa/Arduino)
+J3_PAYLOAD_COM,12,6,even,COM_5V,power,5 V supply EPS -> communication (LoRa/Arduino)
+J3_PAYLOAD_COM,13,7,odd,PAY_5V,power,5 V supply EPS -> payload
+J3_PAYLOAD_COM,14,7,even,PAY_5V,power,5 V supply EPS -> payload
+J3_PAYLOAD_COM,15,8,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,16,8,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,17,9,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,18,9,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,19,10,odd,PAY_12V1,power,12 V supply #1 EPS -> payload
+J3_PAYLOAD_COM,20,10,even,PAY_12V1,power,12 V supply #1 EPS -> payload
+J3_PAYLOAD_COM,21,11,odd,PAY_12V2,power,12 V supply #2 EPS -> payload
+J3_PAYLOAD_COM,22,11,even,PAY_12V2,power,12 V supply #2 EPS -> payload
+J3_PAYLOAD_COM,23,12,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,24,12,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,25,13,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,26,13,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,27,14,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,28,14,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,29,15,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,30,15,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,31,16,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,32,16,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,33,17,odd,GND,ground,Common ground
+J3_PAYLOAD_COM,34,17,even,GND,ground,Common ground
+J3_PAYLOAD_COM,35,18,odd,GND,ground,Common ground
+J3_PAYLOAD_COM,36,18,even,GND,ground,Common ground
+J3_PAYLOAD_COM,37,19,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,38,19,even,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,39,20,odd,NC,not connected,Unused / floating
+J3_PAYLOAD_COM,40,20,even,NC,not connected,Unused / floating

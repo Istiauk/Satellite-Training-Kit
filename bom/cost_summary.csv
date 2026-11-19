@@ -1,0 +1,7 @@
+subsystem,cost_bdt,note
+EPS,2969.33,line items sum to 2969.33 (report total states 3024.33)
+Base station,7700.00,
+Payload & COM,6300.00,
+Backplane,61.32,
+OBC,,not costed in report
+Total (excluding OBC),17030.65,
